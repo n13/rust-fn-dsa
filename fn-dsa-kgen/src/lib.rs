@@ -119,7 +119,8 @@ pub trait KeyPairGenerator: Default {
     /// functions).
     fn keygen<T: CryptoRng + RngCore>(&mut self,
         logn: u32, rng: &mut T, sign_key: &mut [u8], vrfy_key: &mut [u8]);
-            /// Generate a new key pair using a provided seed.
+    
+    /// Generate a new key pair using a provided seed.
     fn keygen_with_seed(&mut self,
         logn: u32, seed: &[u8], sign_key: &mut [u8], vrfy_key: &mut [u8]);
 
